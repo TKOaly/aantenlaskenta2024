@@ -9,12 +9,12 @@ from aantenlaskenta.utils import etsi_ehdokkaat_tilassa, etsi_ehdokas
 
 def test_hallitusvaali():
     with open("testivaaleja/hallitusvaali.txt") as f:
-        vaalin_nimi, paikkamäärä, ehdokkaat, lipukkeet = lue_lipukkeet(f.readlines())
+        vaalin_nimi, paikkamäärä, ehdokkaat, lipukkeet, hylätyt_äänet = lue_lipukkeet(f.readlines())
 
     assert vaalin_nimi == "hallitusvaali"
     assert paikkamäärä == 11
     assert len(ehdokkaat) == 15
-    assert len(lipukkeet) == 65
+    assert len(lipukkeet) == 63
 
     suorita_vaali(paikkamäärä, ehdokkaat, lipukkeet)
 
@@ -26,12 +26,12 @@ def test_hallitusvaali():
 
 def test_virkailijavaali():
     with open("testivaaleja/virkailijavaali1.txt") as f:
-        vaalin_nimi, paikkamäärä, ehdokkaat, lipukkeet = lue_lipukkeet(f.readlines())
+        vaalin_nimi, paikkamäärä, ehdokkaat, lipukkeet, hylätyt_äänet = lue_lipukkeet(f.readlines())
 
     assert vaalin_nimi == "virkailijavaali"
     assert paikkamäärä == 1
     assert len(ehdokkaat) == 2
-    assert len(lipukkeet) == 69
+    assert len(lipukkeet) == 65
 
     suorita_vaali(paikkamäärä, ehdokkaat, lipukkeet)
 
@@ -42,12 +42,12 @@ def test_virkailijavaali():
 
 def test_virkailijavaali2():
     with open("testivaaleja/virkailijavaali2.txt") as f:
-        vaalin_nimi, paikkamäärä, ehdokkaat, lipukkeet = lue_lipukkeet(f.readlines())
+        vaalin_nimi, paikkamäärä, ehdokkaat, lipukkeet, hylätyt_äänet = lue_lipukkeet(f.readlines())
 
     assert vaalin_nimi == "virkailijavaali"
     assert paikkamäärä == 1
     assert len(ehdokkaat) == 2
-    assert len(lipukkeet) == 66
+    assert len(lipukkeet) == 61
 
     suorita_vaali(paikkamäärä, ehdokkaat, lipukkeet)
 
@@ -58,12 +58,12 @@ def test_virkailijavaali2():
 
 def test_virkailijavaali3():
     with open("testivaaleja/virkailijavaali3.txt") as f:
-        vaalin_nimi, paikkamäärä, ehdokkaat, lipukkeet = lue_lipukkeet(f.readlines())
+        vaalin_nimi, paikkamäärä, ehdokkaat, lipukkeet, hylätyt_äänet = lue_lipukkeet(f.readlines())
 
     assert vaalin_nimi == "virkailijavaali"
     assert paikkamäärä == 1
     assert len(ehdokkaat) == 2
-    assert len(lipukkeet) == 69
+    assert len(lipukkeet) == 67
 
     suorita_vaali(paikkamäärä, ehdokkaat, lipukkeet)
 

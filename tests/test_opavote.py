@@ -31,7 +31,7 @@ def test_lyhyt_syöte():
         "Testivaali"
     """.strip().split("\n")
 
-    vaalin_nimi, valittavien_määrä, ehdokkaat, lipukkeet = lue_lipukkeet(syöte)
+    vaalin_nimi, valittavien_määrä, ehdokkaat, lipukkeet, hylätyt_äänet = lue_lipukkeet(syöte)
 
     assert vaalin_nimi == "Testivaali"
     assert valittavien_määrä == 1
@@ -84,7 +84,7 @@ def test_pitkä_vaali():
         "Testivaali"    
     """.strip().split("\n")
 
-    vaalin_nimi, valittavien_määrä, ehdokkaat, lipukkeet = lue_lipukkeet(syöte)
+    vaalin_nimi, valittavien_määrä, ehdokkaat, lipukkeet, hylätyt_äänet = lue_lipukkeet(syöte)
 
     assert vaalin_nimi == "Testivaali"
     assert valittavien_määrä == 5
