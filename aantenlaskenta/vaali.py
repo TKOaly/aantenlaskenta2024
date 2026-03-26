@@ -126,7 +126,7 @@ def suorita_vaali(paikkamäärä: int, ehdokkaat: list[Ehdokas], lipukkeet: list
         vaalilogger.nykytilanne(ehdokkaat)
         kierros_nro += 1
 
-    vaalilogger.lisää_rivi(f"\n{("="*80 + "\n")*2}")
+    vaalilogger.lisää_rivi("\n" + ("=" * 80 + "\n") * 2)
     vaalilogger.lisää_rivi("\nValitaan ehdokkaat: \n")
     for ehdokas in etsi_ehdokkaat_tilassa(ehdokkaat, Tila.Valittu):
         vaalilogger.lisää_rivi(f"\t{ehdokas}")

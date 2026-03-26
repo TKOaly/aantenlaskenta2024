@@ -19,7 +19,7 @@ class VaaliLogger:
             self.lisää_rivi(f"\t{ehdokas}")
 
     def uusi_kierros(self, kierros_nro: int):
-        tulostus = f"\n{'-'*80}\n Kierros {kierros_nro}\n"
+        tulostus = "\n" + "-" * 80 + f"\n Kierros {kierros_nro}\n"
         self.lisää_rivi(tulostus)
 
     def nykytilanne(self, ehdokkaat: list[Ehdokas], vain_tiedostoon=False):
